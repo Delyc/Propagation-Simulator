@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+    :root {
+        
+    }
+
+    @font-face {
+        font-family: GraublauWeb;
+        
+        font-weight: bold;
+        src: url("../assets/VISBYROUNDCF-BOLD\ \(4\).OTF") format("opentype");
+    }
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: GraublauWeb;
+}
+.sidenav {
+    height: 100%;
+
+    
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #092F18;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .sidenav a {
+      color: white;
+    
+  }
+  .nav-a{
+    color: rgba(255, 255, 255, 0.616);
+    border: 2px solid #69ace717;
+    display: flex;
+    gap: 0.7rem;
+    
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    font-weight: bolder;
+    text-decoration: none;
+    position: relative;
+    padding-left: 1rem;
+
+  }
+  .nav-a img{
+      width: 2.5vw;
+  }
+  .sidenav a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #ffffff;
+    transform: scaleX(0);
+    transition: all .45s;
+  }
+  .sidenav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .sidenav  a:nth-child(1) {
+    animation: animate ease-in-out;
+    animation-duration: 0.7s;
+}
+.sidenav a:nth-child(2) {
+    animation: animate ease-in-out;
+    animation-duration: 0.85s;
+}
+.sidenav  a:nth-child(3) {
+    animation: animate ease-in-out;
+    animation-duration: 1s;
+}
+.sidenav a:nth-child(4) {
+    animation: animate ease-in-out;
+    animation-duration: 1.15s;
+}
+
+.sidenav a:nth-child(5) {
+    animation: animate ease-in-out;
+    animation-duration: 1.3s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform:  translateY(90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    transform: translate(0);
+  }
+  .openbtn{
+    transform: translate(0);
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .test{
+      display: flex;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 1rem;
+  }
+
+  .nav-home{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+
+  }
+  .nav-home h1{
+      text-align: center;
+  }
+
+
+
+
+  /* map */
+
+  .cont-map{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100vh;
+      position: relative;
+      
+  }
+
+
+  .cont-add{
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .add-receivers{
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+  }
+  .add-receivers h3{
+      color:#092F18;
+      font-weight: bolder;
+  }
+
+  .add-receivers form{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 80%;
+  }
+  input[type="text"],[type="number"] {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 0;
+    height: 8vh;
+    border-radius: 5px ;
+    text-align: center;
+    border: 2px solid #092f182f;
+
+  }
+  input[type="text"],[type="number"]:focus {
+   
+    border: 0;
+    border: 2px solid #092f182f;
+    outline: 0;
+    
+
+  }
+  .add-receivers form button{
+      background-color: #092F18;
+      color: white;
+      height: 8vh;
+      border: 0;
+      border-radius: 5px;
+  }
+  .image img{
+      height: 100%;
+  }
+  .image{
+      height: 75vh !important;
+      /* width: 20% !important; */
+  }
+
+
+
+  /* table */
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

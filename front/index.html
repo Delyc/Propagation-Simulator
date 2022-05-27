@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/sidenav.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script>
+        var apiUrl = "http://localhost:5000/"
+    </script>
+</head>
+<body>
+    <div class="home">
+    <!-- <div class="nav-home">
+        <h1>GGV</h1>
+    </div> -->
+    <div class="test">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="nav-a"><img src="./assets/add.png" alt=""> Home</a>
+            <a href="#" class="nav-a"><img src="./assets/add.png" alt=""> Add Receiver</a>
+            <a href="#" class="nav-a"><img src="./assets/view.png" alt=""> View Receivers</a>
+            <a href="#" class="nav-a"><img src="./assets/help.png" alt=""> Help</a>
+          
+          </div>
+          
+          <div>
+          
+          </div>
+          
+         
+          <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()">&#9776; </span>
+          <div class="nav-home">
+            <h2>GGV</h2>
+ 
+          </div>
+          
+    </div>
+    <div class="cont-map" ">
+
+    <div id="map" style="height: 80vh; width: 80%; margin-right: 2rem;"></div>
+</div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlWnvLoFl72OeO3FpOkFBObwN5Vr6EkZA&callback=initMap&v=weekly"
+        defer></script>
+    
+    
+      
+      <script src="./script/sidenav.js"></script>
+      <script src="./script/index.js"></script>
+</body>
+</html>
