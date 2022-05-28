@@ -127,6 +127,7 @@
       display: flex;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       padding: 1rem;
+      height: 8vh;
   }
 
   .nav-home{
@@ -162,11 +163,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
   }
   .add-receivers{
       display: flex;
       flex-direction: column;
-      width: 35%;
+      width: 26%;
       justify-content: center;
       align-items: center;
       gap: 2rem;
@@ -180,7 +182,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      width: 80%;
+      width: 100%;
   }
   input[type="text"],[type="number"] {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -232,4 +234,29 @@
   
   tr:nth-child(even) {
     background-color: #dddddd;
+  }
+
+
+  .add-form{
+    width: 40%;
+    margin-top: 2rem;
+  }
+
+  .guide{
+    font-weight: 200px !important;
+    font-size: 1rem;
+    width: 10vw;
+    height: 7vh;
+    color: white;
+    background-color: rgb(33, 128, 216);
+    border: 0;
+    border-radius: 5px;
+
+  }
+  .condition{
+    color: red;
+  }
+  .condition span{
+    color: rgba(0, 0, 0, 0.521);
+    font-size: 0.9rem;
   }
