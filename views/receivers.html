@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+  </link>
+
+  <script>
+    var apiUrl = "/"
+  </script>
+  <script src="sweetalert2.all.min.js"></script>
+  <script src="sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="styles/sidenav.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+
+</head>
+
+<body>
+  <div class="test-flex">
+    <div class="test">
+
+      <div class="big-screen">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/" class="nav-a"><img src="assets/add.png" alt=""> Home</a>
+          <a href="/add" class="nav-a"><img src="assets/add.png" alt=""> Add Receiver</a>
+          <a href="/view" class="nav-a"><img src="assets/view.png" alt=""> View Receivers</a>
+          <a href="#" class="nav-a"><img src="assets/help.png" alt=""> Help</a>
+        </div>
+
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      </div>
+      <div class="small-screen">
+        <div id="mySidenavMob" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/" class="nav-a"><img src="assets/add.png" alt=""> </a>
+          <a href="/add" class="nav-a"><img src="assets/add.png" alt=""> </a>
+          <a href="/view" class="nav-a"><img src="assets/view.png" alt=""> </a>
+          <a href="#" class="nav-a"><img src="assets/help.png" alt=""> </a>
+        </div>
+
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      </div>
+      <div class="nav-home">
+        <h1>GGV</h1>
+      </div>
+
+    </div>
+    <div class="get-allRec">
+      <div class="cont-title">
+        <h1>Receiver</h1>
+        <div class="table-data">
+          <table>
+            <thead>
+              <tr>
+                <th>Radius</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="allreceivers">
+              <h1>All Receivers</h1>
+
+            </tbody>
+          </table>
+
+
+
+        </div>
+        <div class="mobile-data" id="allreceiversMobile">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+
+  </div>
+  <script src="script/index.js"></script>
+  <script src="script/add.js"></script>
+  <script src="script/sidenav.js"></script>
+  <script src="script/guide.js"></script>
+  <script src="script/receivers.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+  </link>
+</body>
+
+</html>

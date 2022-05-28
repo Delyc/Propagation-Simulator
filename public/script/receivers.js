@@ -8,8 +8,8 @@ async function deleteReceiver(id) {
     }
   } else {
     swal("Hello world!", {
-        buttons: false,
-      });
+      buttons: false,
+    });
   }
 }
 
@@ -29,8 +29,6 @@ async function getReceivers() {
   try {
     const res = await axios.get(`${apiUrl}api/receivers`);
     const locs = res.data.data;
-    console.log(locs);
-    //   return locs;
     locs.reverse();
     locs.forEach((value) => {
       data += `
@@ -40,7 +38,7 @@ async function getReceivers() {
     <td> ${value.radius}</td>
     <td> ${value.location.coordinates[1]}</td>
     <td> ${value.location.coordinates[0]}</td>
-    <td><button class="delete" data-id="${value._id}"><img src="../assets/delete.png" alt=""></button><td>
+    <td><button class="delete" data-id="${value._id}"><img src="assets/delete.png" alt=""></button><td>
 
    
     
@@ -55,11 +53,10 @@ async function getReceivers() {
   } catch (error) {
     console.log(error);
     Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-     
-    })
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+    });
     return [];
   }
 }
@@ -88,9 +85,9 @@ async function getReceiversMobile() {
 
   <div class="mobo">
   
-    <div class="data"> <h3 class="head"><img src="../assets/radius.png" alt="">RADIUS</h3> <span class="span-data"> This receiver has  a Radius of  <strong>${value.radius}</strong>km </span></div>
-    <div class="data"><h3 class="head"><img src="../assets/lat.png" alt="">LATITUDE: </h3><span  class="span-data">${value.location.coordinates[1]} </span></div>
-    <div class="data"><h3 class="head"><img src="../assets/long.png" alt="">LONGITUDE: </h3><span  class="span-data"> ${value.location.coordinates[0]}</span></div>
+    <div class="data"> <h3 class="head"><img src="assets/radius.png" alt="">RADIUS</h3> <span class="span-data"> This receiver has  a Radius of  <strong>${value.radius}</strong>km </span></div>
+    <div class="data"><h3 class="head"><img src="assets/lat.png" alt="">LATITUDE: </h3><span  class="span-data">${value.location.coordinates[1]} </span></div>
+    <div class="data"><h3 class="head"><img src="assets/long.png" alt="">LONGITUDE: </h3><span  class="span-data"> ${value.location.coordinates[0]}</span></div>
     
     <button class="delete" data-id="${value._id}">Delete</button>
 
@@ -107,15 +104,13 @@ async function getReceiversMobile() {
   } catch (error) {
     console.log(error);
     Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-     
-    })
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+    });
     return [];
   }
 }
 
-
 getReceivers();
-getReceiversMobile()
+getReceiversMobile();

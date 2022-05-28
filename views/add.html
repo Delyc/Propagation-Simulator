@@ -6,23 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/sidenav.css">
-    <link rel="stylesheet" href="../styles/responsiveness.css">
+    <link rel="stylesheet" href="styles/sidenav.css">
+    <link rel="stylesheet" href="styles/responsiveness.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-    </link>
-    <script src="sweetalert2.all.min.js"></script>
-  
-<link rel="stylesheet" href="sweetalert2.min.css">
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <script>
-        var apiUrl = "http://localhost:5000/"
+        var apiUrl = "/"
     </script>
 </head>
 
@@ -33,18 +29,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <div class="test">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#" class="nav-a"><img src="../assets/home.png" alt=""> Home</a>
-            <a href="#" class="nav-a"><img src="../assets/add.png" alt=""> Add Receiver</a>
-            <a href="#" class="nav-a"><img src="../assets/view.png" alt=""> View Receivers</a>
-            <a href="#" class="nav-a" onclick="help()"><img src="../assets/help.png" alt=""> Help</a>
+            <a href="/" class="nav-a"><img src="assets/home.png" alt=""> Home</a>
+            <a href="/add" class="nav-a"><img src="assets/add.png" alt=""> Add Receiver</a>
+            <a href="/view" class="nav-a"><img src="assets/view.png" alt=""> View Receivers</a>
+            <a href="#" class="nav-a" onclick="help()"><img src="assets/help.png" alt=""> Help</a>
 
         </div>
         <div id="mySidenavMobile" class="mobile">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#" class="nav-a"><img src="../assets/add.png" alt=""> </a>
-            <a href="#" class="nav-a"><img src="../assets/add.png" alt=""> </a>
-            <a href="#" class="nav-a"><img src="../assets/view.png" alt=""> </a>
-            <a href="#" class="nav-a"><img src="../assets/help.png" alt=""> </a>
+            <a href="/" class="nav-a"><img src="assets/add.png" alt=""> </a>
+            <a href="/add" class="nav-a"><img src="assets/add.png" alt=""> </a>
+            <a href="/view" class="nav-a"><img src="assets/view.png" alt=""> </a>
+            <a href="#" class="nav-a"><img src="assets/help.png" alt=""> </a>
 
         </div>
 
@@ -59,18 +55,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
         </div>
 
-    </div> 
+    </div>
     <div class="cont-add" ">
-            <div class="add-form">
+            <div class=" add-form">
         <!-- <img src="../assets/addRec.png" alt=""> -->
         <div id="map" style="height: 80vh; width: 80%; margin-right: 2rem; z-index: 1;"></div>
     </div>
     <div class="add-receivers">
         <button class="guide" onclick="guide()">How to use it</button>
         <h3>ADD A RECEIVER</h3>
-       
 
-        <form action="#none"  name="send">
+
+        <form action="#none" name="send">
             <input type="text" id="longitude" name="longitude" placeholder="longitute">
 
             <input type="text" id="latitude" name="latitude" placeholder="latitude">
@@ -90,11 +86,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlWnvLoFl72OeO3FpOkFBObwN5Vr6EkZA&callback=initMap&v=weekly"
         defer></script>
-    <script src="../script/validation.js"></script>
-    <script src="../script/index.js"></script>
-    <script src="../script/add.js"></script>
-    <script src="../script/sidenav.js"></script>
-    <script src="../script/guide.js"></script>
+    <script src="script/validation.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/add.js"></script>
+    <script src="script/sidenav.js"></script>
+    <script src="script/guide.js"></script>
 </body>
 
 </html>

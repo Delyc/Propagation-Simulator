@@ -3,7 +3,7 @@
 const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 async function getReceivers() {
   try {
-    const res = await axios.get(`${apiUrl}api/receivers`);
+    const res = await axios.get(`/api/receivers`);
     const locs = res.data.data;
     return locs;
   } catch (error) {
@@ -13,19 +13,6 @@ async function getReceivers() {
   }
 }
 
-var icons = {
-  receiver: {
-    icon: "./signal.png",
-  },
-};
-
-function addMarker(feature) {
-  var marker = new google.maps.Marker({
-    position: feature.position,
-    icon: icons[feature.type].icon,
-    map: map,
-  });
-}
 
 async function initMap() {
   const uluru = { lat: -1.9844006566396841, lng: 30.232469556599987 };
@@ -34,12 +21,7 @@ async function initMap() {
     zoom: 7,
     center: uluru,
   });
-  const icon = {
-    url: "../signals.png",
-    scaledSize: new google.maps.Size(20, 20), // scaled size
-    origin: new google.maps.Point(0, 0), // origin
-    anchor: new google.maps.Point(0, 0), // anchor
-  };
+  
   
 
   const locations = await getReceivers();
@@ -93,5 +75,6 @@ async function initMap() {
     windowInfo.open(map);
   });
 }
+
 
 window.initMap = initMap;
