@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GGV | Add</title>
     <link rel="stylesheet" href="styles/sidenav.css">
     <link rel="stylesheet" href="styles/responsiveness.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
@@ -66,14 +66,15 @@
         <h3>ADD A RECEIVER</h3>
 
 
-        <form action="#none" name="send">
-            <input type="text" id="longitude" name="longitude" placeholder="longitute">
+        <form action="#none" name="send" id="send">
+            <input type="text" id="longitude" name="longitude" placeholder="longitute" required>
 
-            <input type="text" id="latitude" name="latitude" placeholder="latitude">
+            <input type="text" id="latitude" name="latitude" placeholder="latitude" required>
             <p class="condition">* <span>Please enter a number from 4 to 10 (4 - 10)</span>*</p>
-            <input type="number" id="rad" name="radius" placeholder="radius">
+            <input type="number" id="rad" name="radius" placeholder="radius" required>
+            <p id="error"></p>
 
-            <button id="send" onclick="myFunction()">Submit</button>
+            <button  >Submit</button>
 
         </form>
     </div>

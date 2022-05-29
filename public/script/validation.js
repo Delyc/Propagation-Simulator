@@ -1,29 +1,35 @@
-
-function myFunction() {
-  // Get the value of the input field with id="numb"
-  let longitude = document.getElementById("longitude").value;
-  let latitude = document.getElementById("latitude").value;
-  let radius = document.getElementById("rad").value;
-  // If x is Not a Number or less than one or greater than 10
-  let lang_msg;
-  let lat_msg;
-  let rad_msg;
-  // if () {
-  //   lang_msg = "Input not valid";
-  // } else {
-  //   text = "Input OK";
-  // }
-  if (latitude=="" || radius=="" || longitude=="") {
-    lat_msg = "Input not val";
-  } else {
-    text = "Input OK";
-  }
-  // if () {
-  //   rad_msg = "Input not val";
-  // } else {
-  //   text = "Input OK";
-  // }
-  // document.getElementById("long").innerHTML = lang_msg;
-  document.getElementById("lat").innerHTML = lat_msg;
-  // document.getElementById("radi").innerHTML = rad_msg;
+function validateLatLng(point) {    
+  let pattern = new RegExp('^-?([1-8]?[1-9]|[1-9]0)\\.{1}\\d{1,6}');
+  
+  return pattern.test(point);
 }
+
+
+
+function validate(form) {
+  let listErr = []
+
+  let longitude = form.longitude.value;
+  let latitude =form.latitude.value;
+  let radius = form.radius.value;
+ 
+
+
+  
+  if (!validateLatLng(latitude)) {
+    listErr.push({field: "latitude", message: "Invalid latitued/ latitude out of range"})
+  } 
+  if (!validateLatLng(longitude)) {
+    listErr.push({field: "longitude", message: "Invalid longitude/ latitude out of range"})
+  } 
+  
+ if (isNaN(radius) || radius < 4 || radius > 10) {
+    
+    listErr.push({field: "radius", message: "Invalid radius/ latitude out of range"})
+  } 
+
+  return listErr
+
+}
+
+

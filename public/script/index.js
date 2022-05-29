@@ -13,16 +13,14 @@ async function getReceivers() {
   }
 }
 
-
 async function initMap() {
   const uluru = { lat: -1.9844006566396841, lng: 30.232469556599987 };
   // The map, centered at Uluru
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
     center: uluru,
+    scrollWheel: true,
   });
-  
-  
 
   const locations = await getReceivers();
   console.log(locations);
@@ -48,7 +46,6 @@ async function initMap() {
         lng: location.location.coordinates[0],
       },
       map,
-    
     });
   });
 
@@ -75,6 +72,5 @@ async function initMap() {
     windowInfo.open(map);
   });
 }
-
 
 window.initMap = initMap;

@@ -9,7 +9,7 @@ document.getElementById("send").addEventListener("submit", async (e) => {
         object[key] = value;
       }
     });
-  console.log(object)
+ 
   try {
     const res = await axios.post(`${apiUrl}api/receivers`, object, {headers: {"Content-Type":"application/json"}});
     // swal({  
@@ -19,13 +19,15 @@ document.getElementById("send").addEventListener("submit", async (e) => {
     //   button: "oh no!",  
     // });  
     Swal.fire({
-      text: "Not sure about coordinates values? we got you covered! Click on map any area you want, the coordinates values  will be inserted in the formbelow for you. Go ahead and put radius value, make sure radius value is from 4 to 10 and hit submit button. Your receiver will be added on the map",
+      text: "added successfully",
       showClass: {
         popup: 'animate__animated animate__fadeInDown'
       },
       hideClass: {
         popup: 'animate__animated animate__fadeOutUp'
       }
+    }).then(()=>{
+      location.reload()
     })
     // .swal-button {
     //   padding: 7px 19px;
