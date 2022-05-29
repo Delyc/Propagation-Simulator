@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 import { Receivers } from "../models/receivers.js";
 const Mongoose = mongoose;
 
+//============= create recerivers ==================
+
 export const createReceiver = async (req, res) => {
   try {
     const loc = {

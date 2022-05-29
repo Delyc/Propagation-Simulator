@@ -17,15 +17,15 @@ function validate(form) {
 
   
   if (!validateLatLng(latitude)) {
-    listErr.push({field: "latitude", message: "Invalid latitued/ latitude out of range"})
+    listErr.push({field: "latitude", message: "Invalid latitude or latitude out of range"})
   } 
   if (!validateLatLng(longitude)) {
-    listErr.push({field: "longitude", message: "Invalid longitude/ latitude out of range"})
+    listErr.push({field: "longitude", message: "Invalid longitude or longitude out of range"})
   } 
   
  if (isNaN(radius) || radius < 4 || radius > 10) {
     
-    listErr.push({field: "radius", message: "Invalid radius/ latitude out of range"})
+    listErr.push({field: "radius", message: "Invalid radius or out of range"})
   } 
 
   return listErr

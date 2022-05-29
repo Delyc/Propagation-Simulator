@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GGV | Add</title>
     <link rel="stylesheet" href="styles/sidenav.css">
-    <link rel="stylesheet" href="styles/responsiveness.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
@@ -35,14 +35,7 @@
             <a href="#" class="nav-a" onclick="help()"><img src="assets/help.png" alt=""> Help</a>
 
         </div>
-        <div id="mySidenavMobile" class="mobile">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/" class="nav-a"><img src="assets/add.png" alt=""> </a>
-            <a href="/add" class="nav-a"><img src="assets/add.png" alt=""> </a>
-            <a href="/view" class="nav-a"><img src="assets/view.png" alt=""> </a>
-            <a href="#" class="nav-a"><img src="assets/help.png" alt=""> </a>
-
-        </div>
+      
 
         <div>
 
@@ -56,7 +49,7 @@
         </div>
 
     </div>
-    <div class="cont-add" ">
+    <div class="cont-add" >
             <div class=" add-form">
         <!-- <img src="../assets/addRec.png" alt=""> -->
         <div id="map" style="height: 80vh; width: 80%; margin-right: 2rem; z-index: 1;"></div>
@@ -67,11 +60,14 @@
 
 
         <form action="#none" name="send" id="send">
-            <input type="text" id="longitude" name="longitude" placeholder="longitute" required>
+            <input type="text" id="longitude" name="longitude" placeholder="longitute">
+            <p class="errorMessage" id="longitudeErrorMessage"></p>
 
-            <input type="text" id="latitude" name="latitude" placeholder="latitude" required>
+            <input type="text" id="latitude" name="latitude" placeholder="latitude" >
+            <p class="errorMessage"  id="latitudeErrorMessage"></p>
             <p class="condition">* <span>Please enter a number from 4 to 10 (4 - 10)</span>*</p>
-            <input type="number" id="rad" name="radius" placeholder="radius" required>
+            <input type="number" id="rad" name="radius" placeholder="radius" >
+            <p class="errorMessage"  id="radiusErrorMessage"></p>
             <p id="error"></p>
 
             <button  >Submit</button>

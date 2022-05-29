@@ -128,6 +128,11 @@
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       padding: 1rem;
       height: 8vh;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      background-color: white;
+      
   }
 
   .nav-home{
@@ -140,6 +145,7 @@
   }
   .nav-home h1{
       text-align: center;
+      color: green;
   }
 
 
@@ -154,6 +160,8 @@
       justify-content: flex-end;
       height: 100vh;
       position: relative;
+     
+      top: 3rem;
       
   }
 
@@ -164,6 +172,8 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      position: relative;
+      top: 6rem;
   }
   .add-receivers{
       display: flex;
@@ -224,17 +234,26 @@
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+   
   }
   
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
+    height: 6vh;
     padding: 8px;
+    text-align: center;
+    
   }
+  .head{
+    color: green;
+  }
+  td{
+    color: #393737;
+
+  }
+
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
 
 
   .add-form{
@@ -259,4 +278,43 @@
   .condition span{
     color: rgba(0, 0, 0, 0.521);
     font-size: 0.9rem;
+  }
+
+
+  .errorMessage{
+    color: red;
+    font-size: 0.7rem;
+  }
+
+  .delete{
+    border: 2px solid rgba(255, 0, 0, 0.57);
+ 
+    height: 6vh;
+    width: 6vw;
+    color: green;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .get-allRec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 8rem;
+ 
+  }
+  .table-data{
+    width: 65%;
+  }
+  .cont-title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-title h1{
+    color: green;
   }
